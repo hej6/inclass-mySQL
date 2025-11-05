@@ -5,9 +5,9 @@
 const mysql      = require('mysql2');
 //Create  a connection pool with mySQL server redentials and dataabase name
 const connection_pool = mysql.createPool({
-  host     : '34.73.13.150',
-  user     : 'nodeuser',
-  password : '12345',
+  host     : '34.23.144.80',
+  user     : 'jared',
+  password : '@Password1',
   database : 'testInstallation',
   connectionLimit : 10
 });
@@ -15,7 +15,7 @@ const connection_pool = mysql.createPool({
 
 //Add a record in the database
 //edit this line to add the name of a book you would like to write and your name as the author
-connection_pool.query("INSERT INTO book (title, author) VALUES ('Fall Colors', 'Sahar');", function (error, insert_results, fields) {
+connection_pool.query("INSERT INTO book (title, author) VALUES ('Prices way too high - Cut it', 'Jared');", function (error, insert_results, fields) {
   if (error) {
 	console.log(error);
 	connection_pool.end();
